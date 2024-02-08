@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\abstractions\TaskManager.Abstractions.csproj" />
+    <ProjectReference Include="..\..\infra\src\TaskManager.Infra.csproj" />
+  </ItemGroup>
+
+</Project>

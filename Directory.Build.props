@@ -1,0 +1,32 @@
+<Project>
+
+  <Import Project="build\dependencies.props" />
+  <Import Project="build\version.props" />
+
+  <PropertyGroup>
+    <Product>TaskManager</Product>
+    <Authors>Ronaldo André</Authors>
+    <Company>Ronaldo André</Company>
+    <Copyright>Ronaldo André © Todos os direitos reservados.</Copyright>
+    <RepositoryUrl>https://github.com/ronaldoandre/TaskManager</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <CodeAnalysisRuleSet>$(MSBuildThisFileDirectory)StyleCop.Analyzers.ruleset</CodeAnalysisRuleSet>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <IsTransformWebConfigDisabled>true</IsTransformWebConfigDisabled>
+    <UserSecretsId>7503c425-9501-4cd9-84b5-5c56d6308a6e</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="$(MSBuildThisFileDirectory)stylecop.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="StyleCop.Analyzers" Version="$(StyleCopAnalyzersPackageVersion)" PrivateAssets="all" />
+  </ItemGroup>
+
+</Project>
