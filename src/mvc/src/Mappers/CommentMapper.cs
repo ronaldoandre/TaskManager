@@ -19,6 +19,7 @@ static class CommentMapper
         return new()
         {
             Id = comment.Id,
+            UserId = comment.UserId,
             Value = comment.Value,
         };
     }

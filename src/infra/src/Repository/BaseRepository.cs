@@ -89,6 +89,20 @@ class BaseRepository<T>(TaskManagerContext context) : IBaseRepository<T>
         }
     }
 
+    public async Task<IList<T>> InsertRange(IList<T> items)
+    {
+        try
+        {
+            await dbSet.AddRangeAsync(items);
+            await context.SaveChangesAsync();
+            return items;
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+
     public async Task<T> Update(T item)
     {
         try

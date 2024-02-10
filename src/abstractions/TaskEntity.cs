@@ -16,6 +16,4 @@ public class TaskEntity : BaseEntity
     public int ProjectId { get; set; }
 
     public ProjectEntity Project { get; set; }
-
-    public IList<LogEntity> Logs { get; set; }
 }

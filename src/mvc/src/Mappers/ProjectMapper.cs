@@ -22,6 +22,7 @@ static class ProjectMapper
             Id = project.Id,
             Title = project.Title,
             Description = project.Description,
+            Tasks = project.Tasks?.MapperTo() ?? null,
         };
     }
 }

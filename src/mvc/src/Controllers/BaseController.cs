@@ -5,7 +5,7 @@ public class BaseController : ControllerBase
     {
         get
         {
-            var userId = Request.Headers.FirstOrDefault(header => header.Key.ToUpper().Equals("USERID")).Value.ToString();
+            var userId = Request.Headers["userId"].ToString();
             if (!string.IsNullOrEmpty(userId))
                 return int.Parse(userId);
             throw new Exception("Usuario deve estar autenticado para essa solicitação.");

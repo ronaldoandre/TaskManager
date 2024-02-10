@@ -11,6 +11,8 @@ public interface IBaseRepository<T>
 
     Task<T> Insert(T item);
 
+    Task<IList<T>> InsertRange(IList<T> items);
+
     Task<T> Update(T item);
 
     Task<bool> Delete(T item);

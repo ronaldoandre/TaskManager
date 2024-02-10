@@ -7,4 +7,6 @@ public class TaskInsertDto
     public string? Description { get; set; }
 
     public PriorityEnum Priority { get; set; }
+
+    public int ProjectId { get; set; }
 }

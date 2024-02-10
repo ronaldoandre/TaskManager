@@ -15,6 +15,7 @@ static class TaskMapper
             Description = task.Description,
             Status = task.Status,
             Priority = task.Priority,
+            Comments = task.Comments?.MapperTo() ?? null,
         };
     }
 
@@ -25,6 +26,7 @@ static class TaskMapper
             Title = task.Title,
             Description = task.Description,
             Priority = task.Priority,
+            ProjectId = task.ProjectId,
         };
     }
 

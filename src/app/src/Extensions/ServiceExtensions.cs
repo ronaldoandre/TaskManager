@@ -8,6 +8,7 @@ static class ServiceExtensions
     {
         services.AddScoped<IProjectService, ProjectService>();
         services.AddScoped<ITaskService, TaskService>();
+        services.AddScoped<IReportService, ReportService>();
         return services;
     }
 }

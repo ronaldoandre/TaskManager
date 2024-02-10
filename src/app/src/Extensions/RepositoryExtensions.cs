@@ -9,6 +9,8 @@ static class RepositoryExtensions
     {
         services.AddScoped<IBaseRepository<ProjectEntity>, BaseRepository<ProjectEntity>>();
         services.AddScoped<IBaseRepository<TaskEntity>, BaseRepository<TaskEntity>>();
+        services.AddScoped<IBaseRepository<CommentEntity>, BaseRepository<CommentEntity>>();
+        services.AddScoped<IBaseRepository<LogEntity>, BaseRepository<LogEntity>>();
         return services;
     }
 }

@@ -83,12 +83,12 @@ public class TaskController(ITaskService taskService) : BaseController
         }
     }
 
-    [HttpPut("Comment")]
-    public async Task<IActionResult> PutComment([FromBody] CommentUpdateDto comment)
+    [HttpPut("{taskId}/Comments")]
+    public async Task<IActionResult> PutComment([FromBody] CommentUpdateDto comment, int taskId)
     {
         try
         {
-            return Ok(new ResponseDto((await taskService.UpdateComment(comment.MapperTo(), UserId)).MapperTo()));
+            return Ok(new ResponseDto((await taskService.UpdateComment(comment.MapperTo(), taskId, UserId)).MapperTo()));
         }
         catch (Exception ex)
         {

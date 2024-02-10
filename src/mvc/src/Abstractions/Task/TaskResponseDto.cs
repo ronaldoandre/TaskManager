@@ -13,6 +13,4 @@ public class TaskResponseDto
     public PriorityEnum Priority { get; set; }
 
     public IList<CommentResponseDto>? Comments { get; set; }
-
-    public IList<LogResponseDto>? Logs { get; set; }
 }

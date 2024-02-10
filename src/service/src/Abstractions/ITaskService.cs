@@ -14,7 +14,7 @@ public interface ITaskService
 
     Task<CommentEntity> CreateComment(CommentEntity comment, int taskId, int userId);
 
-    Task<CommentEntity> UpdateComment(CommentEntity comment, int userId);
+    Task<CommentEntity> UpdateComment(CommentEntity comment, int taskId, int userId);
 
     Task DeleteComment(int commentId, int userId);
 }
