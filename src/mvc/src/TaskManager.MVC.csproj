@@ -5,6 +5,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Using Include="Microsoft.AspNetCore.Mvc" />
+    <Using Include="TaskManager.MVC.Abstractions;" />
+    <Using Include="TaskManager.Service.Abstractions;" />
+    <Using Include="TaskManager.Service.Abstractions.Dto;" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="$(AspNetCoreMvcPackageVersion)" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\..\service\src\TaskManager.Service.csproj" />
   </ItemGroup>
 

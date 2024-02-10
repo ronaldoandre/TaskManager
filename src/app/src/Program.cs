@@ -1,15 +1,19 @@
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddMySql(builder.Configuration)
+                .AddRepositories()
+                .AddServices()
+                .AddEndpointsApiExplorer()
+                .AddSwagger()
+                .AddCors()
+                .AddEndpointsApiExplorer();
 
+builder.Services.AddControllers();
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
-
+app.UseSwagger();
+app.UseSwaggerUI();
+app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+app.MapControllers();
 app.UseHttpsRedirection();
 app.Run();

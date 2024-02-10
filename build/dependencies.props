@@ -2,6 +2,12 @@
 
   <PropertyGroup>
     <StyleCopAnalyzersPackageVersion>1.2.0-beta.435</StyleCopAnalyzersPackageVersion>
+    <EntityFrameworkCorePackageVersion>8.0.1</EntityFrameworkCorePackageVersion>
+    <AspNetCoreMvcPackageVersion>2.1.38</AspNetCoreMvcPackageVersion>
+    <SwashbuckleAspNetCorePackageVersion>6.4.0</SwashbuckleAspNetCorePackageVersion>
+    <SwashbuckleAspNetCoreFiltersPackageVersion>8.0.0</SwashbuckleAspNetCoreFiltersPackageVersion>
+    <PomeloEntityFrameworkCoreMySqlPackageVersion>8.0.0-beta.2</PomeloEntityFrameworkCoreMySqlPackageVersion>
+    <MicrosoftEntityFrameworkCorePackageVersion>8.0.1</MicrosoftEntityFrameworkCorePackageVersion>
   </PropertyGroup>
-
+  
 </Project>

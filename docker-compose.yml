@@ -5,6 +5,17 @@ networks:
     driver: bridge
 
 services:
+  mysql:
+    image: mysql:8.0.33
+    restart: always
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: TestTaskManager
+      TZ: America/Sao_Paulo
+    ports:
+      - "3306:3306"
+    networks:
+      - bridge
   taskmanager:
     image: taskmanager
     restart: always
