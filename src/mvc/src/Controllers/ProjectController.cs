@@ -9,7 +9,7 @@ public class ProjectController(IProjectService projectService) : BaseController
     {
         try
         {
-            return Ok(new ResponseDto(await projectService.CreateProject(project, UserId)));
+            return Ok(new ResponseDto((await projectService.CreateProject(project.MapperTo(), UserId)).MapperTo()));
         }
         catch (Exception ex)
         {
@@ -22,7 +22,7 @@ public class ProjectController(IProjectService projectService) : BaseController
     {
         try
         {
-            return Ok(new ResponseDto(await projectService.GetProjects(UserId)));
+            return Ok(new ResponseDto((await projectService.GetProjects(UserId)).MapperTo()));
         }
         catch (Exception ex)
         {

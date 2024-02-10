@@ -1,12 +1,10 @@
 namespace TaskManager.Service.Implementations;
 class ProjectService(IBaseRepository<ProjectEntity> repoProject) : BaseService, IProjectService
 {
-    public async Task<ProjectResponseDto> CreateProject(ProjectInsertDto project, int userId)
+    public async Task<ProjectEntity> CreateProject(ProjectEntity project, int userId)
     {
-        var projectMap = MapperTo(project);
-        projectMap.UserId = userId;
-        var projectDb = await repoProject.Insert(projectMap);
-        return MapperTo(projectDb);
+        project.UserId = userId;
+        return await repoProject.Insert(project);
     }
 
     public async Task<bool> DeleteProject(int projectId, int userId)
@@ -25,28 +23,8 @@ class ProjectService(IBaseRepository<ProjectEntity> repoProject) : BaseService, 
         return await repoProject.Delete(project);
     }
 
-    public async Task<IList<ProjectResponseDto>> GetProjects(int userId)
+    public async Task<IList<ProjectEntity>> GetProjects(int userId)
     {
-        var projects = await repoProject.Get(project => project.UserId == userId);
-        return projects.Select(MapperTo).ToList();
-    }
-
-    private ProjectResponseDto MapperTo(ProjectEntity project)
-    {
-        return new()
-        {
-            Id = project.Id,
-            Title = project.Title,
-            Description = project.Description,
-        };
-    }
-
-    private ProjectEntity MapperTo(ProjectInsertDto project)
-    {
-        return new()
-        {
-            Title = project.Title,
-            Description = project.Description,
-        };
+        return await repoProject.Get(project => project.UserId == userId);
     }
 }

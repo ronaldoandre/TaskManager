@@ -1,4 +1,4 @@
-namespace TaskManager.Service.Abstractions.Dto;
+namespace TaskManager.MVC.Abstractions;
 public class ProjectResponseDto
 {
     public int Id { get; set; }

@@ -6,14 +6,15 @@
 
   <ItemGroup>
     <Using Include="Microsoft.AspNetCore.Mvc" />
-    <Using Include="TaskManager.MVC.Abstractions;" />
-    <Using Include="TaskManager.Service.Abstractions;" />
-    <Using Include="TaskManager.Service.Abstractions.Dto;" />
+    <Using Include="TaskManager.Abstractions" />
+    <Using Include="TaskManager.MVC.Abstractions" />
+    <Using Include="TaskManager.MVC.Mappers" />
+    <Using Include="TaskManager.Service.Abstractions" />
   </ItemGroup>
 
-
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="$(AspNetCoreMvcPackageVersion)" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core"
+      Version="$(AspNetCoreMvcPackageVersion)" />
   </ItemGroup>
 
   <ItemGroup>

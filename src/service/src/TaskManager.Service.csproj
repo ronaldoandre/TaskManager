@@ -8,7 +8,6 @@
     <Using Include="TaskManager.Abstractions" />
     <Using Include="TaskManager.Infra.Abstractions.Repository" />
     <Using Include="TaskManager.Service.Abstractions" />
-    <Using Include="TaskManager.Service.Abstractions.Dto" />
   </ItemGroup>
 
   <ItemGroup>

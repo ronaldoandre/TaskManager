@@ -9,7 +9,7 @@ public class TaskController(ITaskService taskService) : BaseController
     {
         try
         {
-            return CreatedAtAction(nameof(Post), new ResponseDto(await taskService.CreateTask(task, UserId)));
+            return CreatedAtAction(nameof(Post), new ResponseDto((await taskService.CreateTask(task.MapperTo(), UserId)).MapperTo()));
         }
         catch (Exception ex)
         {
@@ -22,7 +22,7 @@ public class TaskController(ITaskService taskService) : BaseController
     {
         try
         {
-            return Ok(new ResponseDto(await taskService.GetTasks(projectId, UserId)));
+            return Ok(new ResponseDto((await taskService.GetTasks(projectId, UserId)).MapperTo()));
         }
         catch (Exception ex)
         {
@@ -35,7 +35,7 @@ public class TaskController(ITaskService taskService) : BaseController
     {
         try
         {
-            return Ok(new ResponseDto(await taskService.UpdateTask(task, UserId)));
+            return Ok(new ResponseDto((await taskService.UpdateTask(task.MapperTo(), UserId)).MapperTo()));
         }
         catch (Exception ex)
         {
@@ -62,7 +62,7 @@ public class TaskController(ITaskService taskService) : BaseController
     {
         try
         {
-            return Ok(new ResponseDto(await taskService.GetComments(taskId, UserId)));
+            return Ok(new ResponseDto((await taskService.GetComments(taskId, UserId)).MapperTo()));
         }
         catch (Exception ex)
         {
@@ -75,7 +75,7 @@ public class TaskController(ITaskService taskService) : BaseController
     {
         try
         {
-            return CreatedAtAction(nameof(PostComment), new ResponseDto(await taskService.CreateComment(comment, taskId, UserId)));
+            return CreatedAtAction(nameof(PostComment), new ResponseDto((await taskService.CreateComment(comment.MapperTo(), taskId, UserId)).MapperTo()));
         }
         catch (Exception ex)
         {
@@ -88,7 +88,7 @@ public class TaskController(ITaskService taskService) : BaseController
     {
         try
         {
-            return Ok(new ResponseDto(await taskService.UpdateComment(comment, UserId)));
+            return Ok(new ResponseDto((await taskService.UpdateComment(comment.MapperTo(), UserId)).MapperTo()));
         }
         catch (Exception ex)
         {

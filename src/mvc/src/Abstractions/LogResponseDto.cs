@@ -1,4 +1,4 @@
-namespace TaskManager.Service.Abstractions.Dto;
+namespace TaskManager.MVC.Abstractions;
 public class LogResponseDto
 {
     public string? Property { get; set; }
