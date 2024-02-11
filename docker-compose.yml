@@ -19,10 +19,13 @@ services:
   taskmanager:
     image: taskmanager
     restart: always
+    depends_on:
+      - mysql
     environment:
       TZ: America/Sao_Paulo
+      ConnectionStrings__TaskManager: "Server=mysql;Port=3306;Database=taskmanagerdb;Uid=root;Pwd=TestTaskManager;SslMode=Required;"
     container_name: container-taskmanager
     ports:
-      - "5011:80"
+      - "5011:8080"
     networks:
       - bridge

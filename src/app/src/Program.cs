@@ -16,6 +16,7 @@ app.UseSwaggerUI();
 app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 app.MapControllers();
 app.UseHttpsRedirection();
+app.Services.ExecuteMigrations();
 app.Run();
 
 public partial class Program

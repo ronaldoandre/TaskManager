@@ -12,4 +12,20 @@ static class MySqlExtensions
             options.UseMySql(connectionString, ServerVersion.Create(new Version("8.0"), ServerType.MySql), b => b.MigrationsAssembly("TaskManager").EnableRetryOnFailure()));
         return services;
     }
+
+    public static IServiceProvider ExecuteMigrations(this IServiceProvider service)
+    {
+        using (var scope = service.CreateScope())
+        {
+            var services = scope.ServiceProvider;
+
+            var context = services.GetRequiredService<TaskManagerContext>();
+            if (context.Database.GetPendingMigrations().Any())
+            {
+                context.Database.Migrate();
+            }
+        }
+
+        return service;
+    }
 }
