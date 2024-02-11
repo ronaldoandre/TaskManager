@@ -7,7 +7,7 @@ class TaskService(
     public async Task<TaskEntity> CreateTask(TaskEntity task, int userId)
     {
         var tasks = await repoTask.Get(task => task.ProjectId == task.ProjectId & task.UserId == userId);
-        if (!tasks.Any() & tasks.Count >= 20)
+        if (tasks != null & tasks?.Count >= 20)
             throw new Exception("Não é possivel ter mais de 20 tarefas em um projeto.");
         task.UserId = userId;
         return await repoTask.Insert(task);

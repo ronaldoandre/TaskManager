@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Using Include="Moq" />
+    <Using Include="FluentAssertions" />
+    <Using Include="TaskManager.Abstractions" />
+    <Using Include="TaskManager.Infra.Abstractions.Repository" />
+    <Using Include="TaskManager.Service.Implementations" />
+    <Using Include="TaskManager.Service.Tests.Doubles" />
+    <Using Include="System.Linq.Expressions"/>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentAssertions" Version="$(FluentAssertionsPackageVersion)" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="$(MicrosoftNETTestSdkPackageVersion)" />
+    <PackageReference Include="Moq" Version="4.20.70" />
+    <PackageReference Include="xunit" Version="$(xunitPackageVersion)" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="$(xunitrunnervisualstudioPackageVersion)" />
+    <PackageReference Include="coverlet.collector" Version="$(coverletcollectorPackageVersion)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\app\src\TaskManager.csproj" />
+    <ProjectReference Include="..\..\service\src\TaskManager.Service.csproj" />
+    <ProjectReference Include="..\..\infra\src\TaskManager.Infra.csproj" />
+  </ItemGroup>
+
+</Project>

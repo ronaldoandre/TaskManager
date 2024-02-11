@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Using Include="System.Text" />
+    <Using Include="FluentAssertions" />
+    <Using Include="Newtonsoft.Json" />
+    <Using Include="TaskManager.Abstractions" />
+    <Using Include="TaskManager.MVC.Abstractions" />
+    <Using Include="Microsoft.AspNetCore.Hosting" />
+    <Using Include="Microsoft.AspNetCore.Mvc.Testing" />
+    <Using Include="Microsoft.AspNetCore.TestHost" />
+    <Using Include="Microsoft.EntityFrameworkCore" />
+    <Using Include="Microsoft.Extensions.Configuration" />
+    <Using Include="Microsoft.Extensions.DependencyInjection" />
+    <Using Include="Microsoft.Extensions.DependencyInjection.Extensions" />
+    <Using Include="TaskManager.Infra.Context" />
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="$(EntityFrameworkCorePackageVersion)" />
+    <PackageReference Include="FluentAssertions" Version="$(FluentAssertionsPackageVersion)" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="$(EntityFrameworkCorePackageVersion)" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="$(MicrosoftExtensionsConfigurationPackageVersion)" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="$(MicrosoftNETTestSdkPackageVersion)" />
+    <PackageReference Include="xunit" Version="$(xunitPackageVersion)" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="$(xunitrunnervisualstudioPackageVersion)" />
+    <PackageReference Include="coverlet.collector" Version="$(coverletcollectorPackageVersion)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\mvc\src\TaskManager.MVC.csproj" />
+    <ProjectReference Include="..\src\TaskManager.csproj" />
+    <ProjectReference Include="..\..\infra\src\TaskManager.Infra.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,10 +1,6 @@
 namespace TaskManager.Abstractions;
 public class LogEntity : BaseEntity
 {
-    public LogEntity()
-    {
-    }
-
     public LogEntity(string property, string oldValue, string newValue, int userId, int taskId)
     {
         Property = property;

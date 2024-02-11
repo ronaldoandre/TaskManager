@@ -7,7 +7,12 @@
     <SwashbuckleAspNetCorePackageVersion>6.4.0</SwashbuckleAspNetCorePackageVersion>
     <SwashbuckleAspNetCoreFiltersPackageVersion>8.0.0</SwashbuckleAspNetCoreFiltersPackageVersion>
     <PomeloEntityFrameworkCoreMySqlPackageVersion>8.0.0-beta.2</PomeloEntityFrameworkCoreMySqlPackageVersion>
-    <MicrosoftEntityFrameworkCorePackageVersion>8.0.1</MicrosoftEntityFrameworkCorePackageVersion>
+    <FluentAssertionsPackageVersion>7.0.0-alpha.3</FluentAssertionsPackageVersion>
+    <MicrosoftNETTestSdkPackageVersion>17.6.0</MicrosoftNETTestSdkPackageVersion>
+    <xunitPackageVersion>2.4.2</xunitPackageVersion>
+    <xunitrunnervisualstudioPackageVersion>2.4.5</xunitrunnervisualstudioPackageVersion>
+    <coverletcollectorPackageVersion>6.0.0</coverletcollectorPackageVersion>
+    <MicrosoftExtensionsConfigurationPackageVersion>8.0.0</MicrosoftExtensionsConfigurationPackageVersion>
   </PropertyGroup>
   
 </Project>

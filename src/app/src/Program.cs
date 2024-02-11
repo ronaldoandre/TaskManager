@@ -17,3 +17,10 @@ app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 app.MapControllers();
 app.UseHttpsRedirection();
 app.Run();
+
+public partial class Program
+{
+    protected Program()
+    {
+    }
+}

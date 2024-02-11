@@ -4,9 +4,11 @@
     <Rule Id="CS1591" Action="None" />
     <Rule Id="SA1101" Action="None" />
     <Rule Id="SA1200" Action="None" />
+    <Rule Id="SA1201" Action="None" />
     <Rule Id="SA1400" Action="None" />
     <Rule Id="SA1503" Action="None" />
     <Rule Id="SA1600" Action="None" />
+    <Rule Id="SA1601" Action="None" />
     <Rule Id="SA1602" Action="None" />
     <Rule Id="SA1633" Action="None" />
   </Rules>
