@@ -13,25 +13,25 @@ Funcionalidades:
 - Remover uma tarefa do projeto.
 - Editar uma tarefa do projeto.
 - Obter as tarefas do projeto.
-- Adicionar comentario as tarefas.
-- Editar um comentario.
-- Remover um comentario.
-- Obter comentarios de uma tarefa.
+- Adicionar comentários as tarefas.
+- Editar um comentário.
+- Remover um comentário.
+- Obter comentários de uma tarefa.
 - Relatório sobre a conclusão das tarafes por cada usuario.
 
 ## Iniciando
 
 ---
 
-Para inicia o serviço você pode utilizar o Docker Compose basta rodar os comandos abaixo na pasta raiz do projeto:
+Para iniciar o serviço você pode utilizar o Docker Compose basta rodar os comandos abaixo na pasta raiz do projeto:
 
-- Este comando ira gerar a imagem docker do projeto com o nome taskmanager:
+- Este comando irá gerar a imagem docker do projeto com o nome taskmanager:
 
 ```powershell
 docker build -t taskmanager .
 ```
 
-- Este comando ira baixar a imagem do MySQL e inicioar os serviços, tanto do MySQL quanto do Task Manager:
+- Este comando irá baixar a imagem do MySQL e iniciar os serviços, tanto do MySQL quanto do Task Manager:
 
 ```powershell
 docker compose up -d --build
@@ -39,7 +39,7 @@ docker compose up -d --build
 
 ## Testes
 
-Para verificar a cobertura de testes podera utilizar o Coverage Report, executando os scrips nos arquivos "coverage-report.ps1" ou "coverage-report.sh".
+Para verificar a cobertura de testes podera utilizar o Coverage Report, executando os scripts nos arquivos "coverage-report.ps1" ou "coverage-report.sh".
 
 ## Swagger
 
@@ -70,11 +70,11 @@ Em cada chamada ao serviço é necessário informar um header, conforme abaixo:
 
 ## Refinamento
 
-Perguntaria ao PO do projeto qual seria a media de usuarios no sistema, para dimencionar melhorias como paginação no retorno de alguns dados, adicionaria algum servico de monitoranmento e logs como o Elastic APM e Serilog para envio dos logs ao ElasticSearch.
+Perguntaria ao PO do projeto qual seria a media de usuarios no sistema, para dimencionar melhorias como paginação no retorno de alguns dados, adicionaria algum serviço de monitoranmento e logs como o Elastic APM e Serilog para envio dos logs ao ElasticSearch.
 
 ## Final
 
-Este projeto pode ser escalado com diversas instancias, usando um balanceador de carga para o direcionamento das chamadas, dividindo assim a carga dos servidores, para esse processo é ideal que se tenha configurado um sistema de entrega continua, com pipelines automatizadas.
+Este projeto pode ser escalado com diversas instâncias, usando um balanceador de carga para o direcionamento das chamadas, dividindo assim a carga dos servidores, para esse processo é ideal que se tenha configurado um sistema de entrega continua, com pipelines automatizadas.
 
 ## Referências
 
